@@ -37,10 +37,10 @@
   const hero = $("#hero");
   const caption = $("#stageCaption");
   const CAPTIONS = {
-    natural: L("Моляр в 3D. Эмаль — самая твёрдая ткань организма, поэтому лечим под микроскопом и снимаем минимум.",
+    natural: L("Моляр в 3D. Эмаль самая твёрдая ткань организма, поэтому лечим под микроскопом и снимаем минимум.",
                "A molar in 3D. Enamel is the hardest tissue in the body, so we treat under a microscope and remove as little as possible."),
-    implant: L("Титановый имплант заменяет корень, циркониевая коронка — видимую часть. Приживается за 3–4 месяца, гарантия 10 лет.",
-               "A titanium implant replaces the root, a zirconia crown replaces what you see. Heals in 3–4 months, 10-year warranty."),
+    implant: L("Титановый имплант заменяет корень, циркониевая коронка видимую часть. Приживается за 3-4 месяца, гарантия 10 лет.",
+               "A titanium implant replaces the root, a zirconia crown replaces what you see. Heals in 3-4 months, 10-year warranty."),
     whitening: L("ZOOM 4: до 8 тонов светлее за один визит. Следите за шкалой VITA справа.",
                  "ZOOM 4: up to 8 shades lighter in one visit. Watch the VITA shade on the right."),
   };
@@ -53,6 +53,18 @@
     window.dispatchEvent(new CustomEvent("aq:mode", { detail: { mode } }));
   }));
   $("#tooth3d").addEventListener("pointerdown", () => hero.classList.add("was-dragged"), { once: true });
+
+  /* ---------------- нижняя панель на телефоне ----------------
+     появляется, когда кнопки hero ушли с экрана, и прячется у формы записи */
+  const mbar = $("#mbar");
+  if (mbar && "IntersectionObserver" in window) {
+    let heroVis = true, bookVis = false;
+    const upd = () => mbar.classList.toggle("is-on", !heroVis && !bookVis);
+    new IntersectionObserver(([e]) => { heroVis = e.isIntersecting || e.boundingClientRect.top > 0; upd(); })
+      .observe($(".hero-actions"));
+    new IntersectionObserver(([e]) => { bookVis = e.isIntersecting; upd(); }, { rootMargin: "0px 0px -25% 0px" })
+      .observe($(".booking-card"));
+  }
 
   /* ---------------- счётчики ---------------- */
   const countUp = el => {
@@ -195,7 +207,11 @@
     const d = fromKey(state.date);
     const free = new Set(freeSlots(d));
     if (state.time && !free.has(state.time)) state.time = null;
+    const isToday = keyOf(new Date()) === state.date;
+    const nowMin = new Date().getHours() * 60 + new Date().getMinutes();
     for (const t of slotsFor(d)) {
+      // прошедшее время сегодня не показываем вовсе, чтобы не было стены зачёркнутых слотов
+      if (isToday) { const [h, m] = t.split(":").map(Number); if (h * 60 + m < nowMin + 60) continue; }
       const b = document.createElement("button");
       b.type = "button";
       b.className = "time";
@@ -218,6 +234,11 @@
 
   // кнопки «Записаться» в услугах и у врачей
   const goBooking = () => $("#booking").scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+  // вся карточка услуги нажимается, а не только стрелка
+  $$(".svc").forEach(card => card.addEventListener("click", e => {
+    if (e.target.closest("button")) return;
+    card.querySelector(".svc-book")?.click();
+  }));
   $$("[data-service]").forEach(b => b.addEventListener("click", () => {
     const s = b.dataset.service;
     const radio = form.querySelector(`input[name="service"][value="${s}"]`);

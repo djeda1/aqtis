@@ -397,7 +397,8 @@ function init() {
     renderer.setSize(w, h, false);
     sparkMat.uniforms.uPR.value = pr;
     camera.aspect = w / h;
-    const halfH = 2.45, halfW = 1.9;
+    const phone = w < 620; // на телефоне сцена ниже, зуб можно крупнее
+    const halfH = phone ? 2.1 : 2.45, halfW = phone ? 1.75 : 1.9;
     const tanV = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     const dist = Math.max(halfH / tanV, halfW / (tanV * camera.aspect));
     camera.position.set(0, dist * 0.3, dist);

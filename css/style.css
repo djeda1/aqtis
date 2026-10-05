@@ -496,37 +496,197 @@ h2 em { font-size: 1.06em; }
   .booking-info { position: static; }
   .map { min-height: 360px; }
 }
+.svc { cursor: pointer; }
+.mbar { display: none; }
+
+/* =========================================================
+   СМАРТФОН: всё главное на первом экране, крупные зоны нажатия,
+   компактные списки, быстрые действия под большим пальцем
+   ========================================================= */
 @media (max-width: 620px) {
-  body { font-size: 15px; }
-  .lang a { padding: 4px 8px; }
-  .hero-stage { height: 470px; min-height: 0; }
-  .hero h1 { font-size: 42px; }
-  .hero-actions .btn { flex: 1 1 100%; }
-  .hero-stats { gap: 18px; justify-content: space-between; }
-  .hero-stats span { font-size: 12px; }
-  .float-card { display: none; }
-  .mode { padding: 0 12px; font-size: 13px; height: 38px; }
-  .stage-caption { font-size: 13px; }
-  .shade { top: -40px; }
-  .trust ul { justify-content: flex-start; gap: 12px 22px; }
-  .trust li { font-size: 13px; }
-  .svc-grid { grid-template-columns: 1fr; }
+  :root { --pad: 16px; --nav-h: 60px; }
+  body { font-size: 16px; }
+  html { scroll-padding-top: calc(var(--nav-h) + 8px); }
+
+  /* шапка */
+  .nav { gap: 10px; }
+  .logo-mark { width: 26px; height: 26px; }
+  .logo-word { font-size: 17px; }
+  .lang a { padding: 7px 11px; }
+  .burger { width: 44px; height: 44px; }
+  .burger span { left: 13px; right: 13px; }
+  .burger span:first-child { top: 17px; }
+  .burger span:last-child { top: 25px; }
+  .drawer nav a:not(.btn) { font-size: 26px; padding: 12px 0; }
+
+  /* первый экран: модель, заголовок и кнопки без прокрутки */
+  .hero { padding-top: var(--nav-h); padding-bottom: 0; }
+  .hero-stage { height: clamp(300px, 46svh, 400px); min-height: 0; margin: 0 calc(var(--pad) * -1); }
+  .tooth3d { inset: 0 0 58px 0; }
+  .halo span:nth-child(1) { width: 74vw; top: 42%; }
+  .halo span:nth-child(2) { width: 100vw; top: 42%; }
+  .drag-hint, .float-card, .stage-caption { display: none; }
+  .stage-ui { bottom: 4px; width: calc(100% - 2 * var(--pad)); gap: 0; }
+  .modes { width: 100%; }
+  .mode { flex: 1; justify-content: center; height: 42px; padding: 0 6px; gap: 6px; font-size: 14px; }
+  .mode i { font-size: 16px; }
+  .shade { top: -38px; }
+  .hero-copy { margin-top: 18px; }
+  .eyebrow { display: none; }
+  .hero h1 { font-size: clamp(32px, 9.2vw, 40px); line-height: 1.06; letter-spacing: -.03em; }
+  .lead { margin-top: 12px; font-size: 16px; line-height: 1.5; }
+  .hero-actions { display: grid; grid-template-columns: 1.35fr 1fr; gap: 10px; margin-top: 20px; }
+  .hero-actions .btn { height: 52px; padding: 0 12px; font-size: 15px; }
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; padding-top: 20px; }
+  .hero-stats b { font-size: 24px; }
+  .hero-stats span { display: block; font-size: 13px; line-height: 1.35; color: var(--ink-2); }
+
+  /* технологии: одна строка с прокруткой вместо рваных строк */
+  .trust { margin-top: 28px; }
+  .trust ul {
+    flex-wrap: nowrap; justify-content: flex-start; gap: 8px; padding: 14px var(--pad);
+    overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 40px), transparent);
+  }
+  .trust ul::-webkit-scrollbar { display: none; }
+  .trust li { flex: none; scroll-snap-align: start; padding: 9px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 14px; white-space: nowrap; gap: 8px; }
+  .trust i { font-size: 18px; }
+
+  /* общие отступы и заголовки */
+  .section { padding-top: 72px; }
+  .section-head { margin-bottom: 28px; }
+  .section-head.split { flex-direction: column; align-items: stretch; gap: 16px; }
+  .section-head.split > div, .section-head.split > .sub { flex: none; max-width: none; }
+  .kicker { font-size: 12px; margin-bottom: 12px; }
+  h2 { font-size: 30px; line-height: 1.12; letter-spacing: -.02em; }
+  .sub { margin-top: 12px; font-size: 16px; line-height: 1.55; }
+
+  /* услуги: компактные строки, вся карточка нажимается */
+  .svc-grid { grid-template-columns: 1fr; gap: 10px; }
+  .svc {
+    display: grid; grid-template-columns: 48px minmax(0, 1fr) 36px; column-gap: 14px; row-gap: 3px;
+    align-items: center; padding: 16px; border-radius: 18px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .svc:hover { transform: none; box-shadow: none; border-color: var(--line); }
+  .svc:active { background: var(--bg-soft); }
+  .svc-feature { border-color: #cfe9ed; }
+  .svc-ico { grid-column: 1; grid-row: 1 / 4; width: 48px; height: 48px; margin: 0; font-size: 24px; border-radius: 14px; }
+  .svc h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 17px; line-height: 1.25; }
+  .svc p {
+    grid-column: 2; grid-row: 2; font-size: 14px; line-height: 1.45; color: var(--ink-2);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .svc-foot { display: contents; }
+  .price { grid-column: 2; grid-row: 3; margin-top: 6px; font-size: 15px; color: var(--accent-ink); }
+  .svc-book { grid-column: 3; grid-row: 1 / 4; width: 36px; height: 36px; font-size: 16px; }
+  .svc:hover .svc-book { background: var(--bg-cool); color: var(--ink); transform: none; }
+  .svc-tag { position: static; grid-column: 2; grid-row: 4; justify-self: start; margin-top: 8px; font-size: 11px; padding: 4px 10px; }
+
+  /* врачи: карусель с выглядывающей следующей карточкой */
   .doc-grid {
-    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; gap: 12px;
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; gap: 12px;
     overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
-    margin: 0 calc(var(--pad) * -1); padding: 4px var(--pad) 8px; scroll-padding-inline: var(--pad);
+    margin: 0 calc(var(--pad) * -1); padding: 4px var(--pad) 12px; scroll-padding-inline: var(--pad);
   }
   .doc-grid::-webkit-scrollbar { display: none; }
-  .doc { scroll-snap-align: start; }
-  .rev-track { grid-auto-columns: 86%; }
-  .rev { padding: 22px; }
-  .rev p { font-size: 15px; }
-  .section-head.split { align-items: flex-start; }
+  .doc { scroll-snap-align: start; border-radius: 22px; }
+  .doc:hover { transform: none; box-shadow: none; }
+  .doc:hover .doc-photo img { transform: none; }
+  .doc-photo { aspect-ratio: 1 / 1; }
+  .doc-body { padding: 16px; }
+  .doc h3 { font-size: 18px; }
+  .doc-role { font-size: 14px; color: var(--ink-2); }
+  .doc-tags { margin-top: 12px; }
+  .doc-tags li { font-size: 12.5px; }
+  .doc-foot { flex-direction: column; align-items: stretch; gap: 12px; padding-top: 16px; }
+  .doc-rate { font-size: 14px; }
+  .doc-foot .btn { width: 100%; height: 46px; }
+
+  /* первый визит */
+  .visit { gap: 28px; }
+  .visit-media { aspect-ratio: 4 / 3; border-radius: 22px; }
+  .visit-badge { left: 12px; bottom: 12px; padding: 10px 14px; border-radius: 14px; }
+  .visit-badge b { font-size: 16px; }
+  .steps { margin-top: 20px; }
+  .steps li { grid-template-columns: 40px 1fr; gap: 8px; padding: 16px 0; }
+  .steps span { font-size: 24px; }
+  .steps h3 { font-size: 17px; margin-bottom: 4px; }
+  .steps p { font-size: 15px; line-height: 1.5; }
+
+  /* отзывы: листаются свайпом */
+  .rating-sum { align-self: stretch; padding: 14px 18px; }
+  .rs-score { font-size: 40px; }
+  .rating-sum p { font-size: 13.5px; color: var(--ink-2); }
+  .rev-track { grid-auto-columns: 84%; gap: 12px; margin: 0 calc(var(--pad) * -1); padding: 4px var(--pad) 8px; scroll-padding-inline: var(--pad); }
+  .rev { padding: 20px; border-radius: 22px; gap: 14px; }
+  .rev p { font-size: 15.5px; line-height: 1.55; }
+  .rev small { font-size: 13px; color: var(--ink-2); }
+  .rev-nav { display: none; }
+
+  /* запись */
+  .booking { gap: 28px; }
+  .perks { margin-top: 20px; gap: 10px; }
+  .perks li { font-size: 15.5px; }
+  .wa-link { margin-top: 20px; }
+  .booking-card { padding: 20px 18px; border-radius: 22px; }
+  .field { margin-bottom: 26px; }
+  .field legend, .field .legend { font-size: 17px; }
+  .chip span { height: 42px; padding: 0 15px; }
+  .select select { height: 52px; font-size: 16px; }
+  .dates { grid-auto-columns: 60px; margin: 0 -18px; padding: 2px 18px 10px; scroll-padding-inline: 18px; scrollbar-width: none; }
+  .dates::-webkit-scrollbar { display: none; }
+  .date { height: 66px; }
+  .times { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .time { height: 46px; font-size: 15px; }
+  .hint { font-size: 14px; color: var(--ink-2); }
   .row2 { grid-template-columns: 1fr; gap: 0; }
+  .input > span { font-size: 14px; }
+  .check { font-size: 14px; }
   .done-list { grid-template-columns: 1fr; gap: 2px; }
   .done-list dd { margin-bottom: 10px; }
+  .done-actions .btn { flex: 1 1 100%; }
+
+  /* контакты */
+  .contacts { gap: 12px; }
+  .contacts-card { padding: 22px 20px; border-radius: 22px; }
+  .c-list { margin-top: 22px; gap: 18px; }
+  .c-list b { font-size: 16px; }
+  .c-list span { font-size: 14px; }
+  .c-actions { margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .c-actions .btn { padding: 0 12px; }
+  .map { min-height: 300px; border-radius: 22px; }
   .map-label { font-size: 12px; }
-  .f-bottom { flex-direction: column; }
+
+  /* подвал: место под нижнюю панель */
+  .footer { margin-top: 48px; padding: 28px var(--pad) calc(100px + env(safe-area-inset-bottom)); }
+  .f-top { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .f-top nav { gap: 10px 20px; }
+  .f-bottom { flex-direction: column; gap: 8px; font-size: 13px; }
+
+  /* нижняя панель: позвонить, WhatsApp, записаться */
+  .mbar {
+    display: flex; align-items: center; gap: 8px;
+    position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 40;
+    padding: 6px; border-radius: 999px;
+    background: rgba(255, 255, 255, .9); border: 1px solid var(--line);
+    backdrop-filter: saturate(1.6) blur(16px); -webkit-backdrop-filter: saturate(1.6) blur(16px);
+    box-shadow: 0 16px 36px -14px rgba(15, 29, 43, .38);
+    transform: translateY(calc(100% + 24px)); transition: transform .45s var(--ease);
+  }
+  .mbar.is-on { transform: none; }
+  .mbar-ico { flex: none; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--bg-cool); font-size: 22px; }
+  .mbar-ico:active { background: var(--line); }
+  .mbar-wa { color: #128c44; }
+  .mbar-cta { flex: 1; height: 48px; padding: 0 16px; font-size: 15px; }
+}
+
+@media (max-width: 360px) {
+  .hero-actions { grid-template-columns: 1fr; }
+  .mode { font-size: 13px; }
+  .mode i { display: none; }
+  .hero-stats b { font-size: 21px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
