@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AQTIS · стоматология в Алматы</title>
+  <meta name="description" content="AQTIS: стоматология в Алматы. Лечение под микроскопом, имплантация с гарантией 10 лет, отбеливание ZOOM. Онлайн-запись к врачу. Концепт сайта.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="alternate" hreflang="ru" href="./">
+  <link rel="alternate" hreflang="en" href="en/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">К содержанию</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="AQTIS, на главную">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.2 4.5c2.6 0 4.2 1.3 6.8 1.3s4.2-1.3 6.8-1.3c3.9 0 6 3.2 6 7.1 0 3.1-1.3 5-2.3 7.6-1 2.7-1.2 8.3-4 8.3-2.6 0-2.4-6.6-6.5-6.6s-3.9 6.6-6.5 6.6c-2.8 0-3-5.6-4-8.3-1-2.6-2.3-4.5-2.3-7.6 0-3.9 2.1-7.1 6-7.1Z"/></svg>
+      <span class="logo-word">AQTIS</span>
+    </a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="nav-phone" href="tel:+77000000000"><i class="ph ph-phone"></i> +7 700 000 00 00</a>
+    <div class="lang" aria-label="Язык">
+      <a href="./" aria-current="true">RU</a>
+      <a href="en/" hreflang="en" lang="en">EN</a>
+    </div>
+    <a href="#booking" class="btn btn-dark btn-sm nav-cta">Записаться</a>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <nav aria-label="Мобильная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="tel:+77000000000" class="drawer-phone">+7 700 000 00 00</a>
+      <a href="#booking" class="btn btn-dark">Записаться на приём</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <span id="top" class="anchor-top"></span>
+      <div class="hero-stage">
+        <div class="halo" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="tooth3d" id="tooth3d" aria-label="3D-модель моляра, можно вращать" role="img"></div>
+        <svg class="tooth-fallback" viewBox="0 0 200 260" aria-hidden="true"><defs><linearGradient id="tf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e3ecef"/></linearGradient></defs><path fill="url(#tf)" stroke="#d5e1e5" stroke-width="2" d="M52 20c18 0 30 9 48 9s30-9 48-9c27 0 42 22 42 49 0 22-9 35-16 53-7 19-8 58-28 58-18 0-17-46-46-46s-28 46-46 46c-20 0-21-39-28-58C19 104 10 91 10 69c0-27 15-49 42-49Z"/></svg>
+
+        <div class="stage-ui">
+          <div class="modes" role="tablist" aria-label="Режим модели">
+            <button role="tab" class="mode is-active" aria-selected="true" data-mode="natural"><i class="ph ph-tooth"></i> Зуб</button>
+            <button role="tab" class="mode" aria-selected="false" data-mode="implant"><i class="ph ph-screwdriver"></i> Имплант</button>
+            <button role="tab" class="mode" aria-selected="false" data-mode="whitening"><i class="ph ph-sparkle"></i> Отбеливание</button>
+          </div>
+          <p class="stage-caption" id="stageCaption" aria-live="polite">Моляр в 3D. Эмаль — самая твёрдая ткань организма, поэтому лечим под микроскопом и снимаем минимум.</p>
+          <span class="shade" id="shade" aria-hidden="true">VITA A3.5</span>
+        </div>
+        <p class="drag-hint" aria-hidden="true"><i class="ph ph-hand-grabbing"></i> Потяните, чтобы повернуть</p>
+
+        <div class="float-card fc-1" aria-hidden="true">
+          <span class="fc-ico"><i class="ph ph-shield-check"></i></span>
+          <span><b>10 лет</b><small>гарантия на импланты</small></span>
+        </div>
+        <div class="float-card fc-2" aria-hidden="true">
+          <span class="fc-ico"><i class="ph-fill ph-star"></i></span>
+          <span><b>4,9</b><small>1 248 отзывов в 2ГИС</small></span>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span>Стоматология в Алматы · с 2011 года</p>
+        <h1>Улыбка, о которой <em>можно не думать</em></h1>
+        <p class="lead">Лечим спокойно и без боли: цифровая диагностика, микроскоп в каждом кабинете и смета, которая не меняется после начала лечения.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#booking">Записаться на приём <i class="ph ph-arrow-right"></i></a>
+          <a class="btn btn-line" href="#doctors">Выбрать врача</a>
+        </div>
+        <ul class="hero-stats">
+          <li><b data-count="15">15</b><span>лет работы</span></li>
+          <li><b data-count="38000" data-sep>38 000</b><span>пациентов</span></li>
+          <li><b>0 ₸</b><span>первая консультация</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="trust" aria-label="Технологии">
+      <ul>
+        <li><i class="ph ph-microscope"></i>Микроскопы Carl Zeiss</li>
+        <li><i class="ph ph-cube-focus"></i>КТ 3D за 12 секунд</li>
+        <li><i class="ph ph-syringe"></i>Компьютерная анестезия</li>
+        <li><i class="ph ph-certificate"></i>Импланты Straumann</li>
+        <li><i class="ph ph-baby"></i>Детский кабинет</li>
+      </ul>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Услуги и цены</p>
+        <h2>Всё для здоровья зубов <em>в одной клинике</em></h2>
+        <p class="sub">Цены фиксируем в плане лечения. Если в процессе понадобится больше работы, доплачивать не придётся.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc" data-reveal>
+          <i class="ph ph-first-aid-kit svc-ico"></i>
+          <h3>Лечение кариеса</h3>
+          <p>Под микроскопом, с изоляцией коффердамом. Пломба подбирается по цвету эмали.</p>
+          <div class="svc-foot"><span class="price">от 18 000 ₸</span><button class="svc-book" data-service="therapy" aria-label="Записаться: лечение кариеса"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc svc-feature" data-reveal>
+          <i class="ph ph-screwdriver svc-ico"></i>
+          <h3>Имплантация</h3>
+          <p>Straumann и Osstem. Навигационный шаблон по КТ, установка за один визит.</p>
+          <div class="svc-foot"><span class="price">от 190 000 ₸</span><button class="svc-book" data-service="implant" aria-label="Записаться: имплантация"><i class="ph ph-arrow-up-right"></i></button></div>
+          <span class="svc-tag">Гарантия 10 лет</span>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-crown-simple svc-ico"></i>
+          <h3>Коронки и виниры</h3>
+          <p>Цирконий и E.max из собственной лаборатории. Примерка цифрового макета до работы.</p>
+          <div class="svc-foot"><span class="price">от 120 000 ₸</span><button class="svc-book" data-service="prosthetics" aria-label="Записаться: коронки и виниры"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-align-center-horizontal-simple svc-ico"></i>
+          <h3>Брекеты и элайнеры</h3>
+          <p>Металлические, керамические и прозрачные капы. Показываем результат в 3D заранее.</p>
+          <div class="svc-foot"><span class="price">от 450 000 ₸</span><button class="svc-book" data-service="ortho" aria-label="Записаться: брекеты и элайнеры"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-sparkle svc-ico"></i>
+          <h3>Отбеливание</h3>
+          <p>ZOOM 4: до 8 тонов светлее за 90 минут. Без вреда для эмали и чувствительности.</p>
+          <div class="svc-foot"><span class="price">от 85 000 ₸</span><button class="svc-book" data-service="whitening" aria-label="Записаться: отбеливание"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-drop svc-ico"></i>
+          <h3>Профгигиена</h3>
+          <p>Ультразвук, AirFlow и полировка. Раз в полгода, и большинство проблем не случится.</p>
+          <div class="svc-foot"><span class="price">от 22 000 ₸</span><button class="svc-book" data-service="hygiene" aria-label="Записаться: профгигиена"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-smiley svc-ico"></i>
+          <h3>Детская стоматология</h3>
+          <p>Отдельный кабинет с мультиками, адаптационный визит бесплатно.</p>
+          <div class="svc-foot"><span class="price">от 12 000 ₸</span><button class="svc-book" data-service="kids" aria-label="Записаться: детская стоматология"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-scissors svc-ico"></i>
+          <h3>Хирургия</h3>
+          <p>Удаление зубов мудрости, синус-лифтинг, костная пластика. Под седацией по желанию.</p>
+          <div class="svc-foot"><span class="price">от 15 000 ₸</span><button class="svc-book" data-service="surgery" aria-label="Записаться: хирургия"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ DOCTORS ============ -->
+    <section class="section doctors" id="doctors">
+      <div class="section-head split" data-reveal>
+        <div>
+          <p class="kicker">Врачи</p>
+          <h2>Люди, которым <em>доверяют улыбки</em></h2>
+        </div>
+        <p class="sub">Каждый врач проходит минимум 60 часов обучения в год. Записаться можно к конкретному специалисту.</p>
+      </div>
+      <div class="doc-grid">
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&h=860&fit=crop&crop=faces&q=80" alt="Арман Сейтжанов" loading="lazy" width="700" height="860">
+            <span class="doc-exp">18 лет опыта</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Арман Сейтжанов</h3>
+            <p class="doc-role">Хирург-имплантолог, главный врач</p>
+            <ul class="doc-tags"><li>Имплантация</li><li>Костная пластика</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 5,0 · 312 отзывов</span>
+              <button class="btn btn-soft btn-sm" data-doctor="arman">Записаться</button>
+            </div>
+          </div>
+        </article>
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&h=860&fit=crop&crop=faces&q=80" alt="Айгерим Нурланова" loading="lazy" width="700" height="860">
+            <span class="doc-exp">11 лет опыта</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Айгерим Нурланова</h3>
+            <p class="doc-role">Ортодонт</p>
+            <ul class="doc-tags"><li>Элайнеры</li><li>Брекеты</li><li>Дети с 6 лет</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 4,9 · 204 отзыва</span>
+              <button class="btn btn-soft btn-sm" data-doctor="aigerim">Записаться</button>
+            </div>
+          </div>
+        </article>
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=860&fit=crop&crop=faces&q=80" alt="Елена Ким" loading="lazy" width="700" height="860">
+            <span class="doc-exp">14 лет опыта</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Елена Ким</h3>
+            <p class="doc-role">Терапевт-эндодонтист</p>
+            <ul class="doc-tags"><li>Каналы под микроскопом</li><li>Реставрации</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 4,9 · 268 отзывов</span>
+              <button class="btn btn-soft btn-sm" data-doctor="elena">Записаться</button>
+            </div>
+          </div>
+        </article>
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=700&h=860&fit=crop&crop=faces&q=80" alt="Тимур Абдрахманов" loading="lazy" width="700" height="860">
+            <span class="doc-exp">9 лет опыта</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Тимур Абдрахманов</h3>
+            <p class="doc-role">Ортопед, эстетист</p>
+            <ul class="doc-tags"><li>Виниры</li><li>Коронки</li><li>Отбеливание</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 4,9 · 157 отзывов</span>
+              <button class="btn btn-soft btn-sm" data-doctor="timur">Записаться</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ FIRST VISIT ============ -->
+    <section class="section visit">
+      <div class="visit-media" data-reveal>
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80" alt="Светлый кабинет клиники с креслом и микроскопом" loading="lazy" width="1200" height="800">
+        <div class="visit-badge"><i class="ph ph-clock"></i><span><b>45 минут</b>первый визит без спешки</span></div>
+      </div>
+      <div class="visit-copy" data-reveal>
+        <p class="kicker">Первый визит</p>
+        <h2>Сначала разберёмся, <em>потом лечим</em></h2>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Осмотр и 3D-снимок</h3><p>Врач смотрит каждый зуб, КТ делаем прямо в кабинете. Консультация бесплатна.</p></div></li>
+          <li><span>02</span><div><h3>План и смета</h3><p>Два-три варианта лечения с ценами и сроками. Цена фиксируется в договоре.</p></div></li>
+          <li><span>03</span><div><h3>Лечение без боли</h3><p>Компьютерная анестезия, седация по желанию, наушники и плед.</p></div></li>
+          <li><span>04</span><div><h3>Контроль</h3><p>Напомним о гигиене и осмотре. Гарантию подтверждаем документом.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="section reviews" id="reviews">
+      <div class="section-head split" data-reveal>
+        <div>
+          <p class="kicker">Отзывы</p>
+          <h2>Говорят пациенты, <em>а не мы</em></h2>
+        </div>
+        <div class="rating-sum">
+          <div class="rs-score">4,9</div>
+          <div>
+            <div class="stars" aria-label="4,9 из 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p>1 248 отзывов в 2ГИС и Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev-wrap" data-reveal>
+        <div class="rev-track" id="revTrack" tabindex="0" aria-label="Отзывы пациентов">
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">2ГИС</span></div>
+            <p>«Боялась стоматологов с детства. Елена Викторовна лечила каналы, а я в наушниках смотрела сериал. Ни разу не было больно, честно.»</p>
+            <footer><span class="ava">Д</span><div><b>Динара А.</b><small>Лечение каналов · сентябрь</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">Google</span></div>
+            <p>«Ставил два импланта у Армана Маратовича. Всё по плану: КТ, шаблон, установка за час. Смета не выросла ни на тенге.»</p>
+            <footer><span class="ava">Е</span><div><b>Ерлан К.</b><small>Имплантация · август</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">2ГИС</span></div>
+            <p>«Дочке 7 лет, сама просится к „тёте Айгерим“. Капы носит без капризов, а мне показали на 3D-модели, какими будут зубы.»</p>
+            <footer><span class="ava">С</span><div><b>Светлана М.</b><small>Ортодонтия · июль</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">Google</span></div>
+            <p>«Сделала виниры на 8 зубов. Сначала примерили цифровой макет, я поправила форму. Результат выглядит естественно, никто не верит, что это виниры.»</p>
+            <footer><span class="ava">А</span><div><b>Алия Т.</b><small>Виниры · июнь</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph ph-star"></i></div><span class="rev-src">2ГИС</span></div>
+            <p>«Отбеливание ZOOM, стало светлее на 6 тонов. Пару дней была чувствительность, но врач предупредил заранее и дал гель. Записываюсь ещё на гигиену.»</p>
+            <footer><span class="ava">М</span><div><b>Мадина Ж.</b><small>Отбеливание · май</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">Google</span></div>
+            <p>«Удаляли восьмёрку под седацией. Проснулся, а всё уже закончилось. Вечером позвонила медсестра узнать, как я себя чувствую. Приятно.»</p>
+            <footer><span class="ava">Р</span><div><b>Руслан Б.</b><small>Хирургия · апрель</small></div></footer>
+          </article>
+        </div>
+        <div class="rev-nav">
+          <button class="icon-btn" id="revPrev" aria-label="Предыдущие отзывы"><i class="ph ph-arrow-left"></i></button>
+          <button class="icon-btn" id="revNext" aria-label="Следующие отзывы"><i class="ph ph-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section booking" id="booking">
+      <div class="booking-info" data-reveal>
+        <p class="kicker">Онлайн-запись</p>
+        <h2>Запишитесь <em>за минуту</em></h2>
+        <p class="sub">Выберите услугу, врача и удобное время. Администратор перезвонит в течение 15 минут и подтвердит запись.</p>
+        <ul class="perks">
+          <li><i class="ph ph-check-circle"></i>Первая консультация бесплатно</li>
+          <li><i class="ph ph-check-circle"></i>Напомним о визите за день в WhatsApp</li>
+          <li><i class="ph ph-check-circle"></i>Перенести можно в любой момент</li>
+        </ul>
+        <a class="wa-link" id="waLink" href="https://wa.me/77000000000" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo"></i> Удобнее в WhatsApp</a>
+      </div>
+
+      <div class="booking-card" data-reveal>
+        <form id="bookingForm" novalidate>
+          <fieldset class="field">
+            <legend><span class="num">1</span>Услуга</legend>
+            <div class="chips" id="serviceChips">
+              <label class="chip"><input type="radio" name="service" value="consult" checked><span>Консультация</span></label>
+              <label class="chip"><input type="radio" name="service" value="therapy"><span>Лечение</span></label>
+              <label class="chip"><input type="radio" name="service" value="implant"><span>Имплантация</span></label>
+              <label class="chip"><input type="radio" name="service" value="prosthetics"><span>Коронки и виниры</span></label>
+              <label class="chip"><input type="radio" name="service" value="ortho"><span>Ортодонтия</span></label>
+              <label class="chip"><input type="radio" name="service" value="whitening"><span>Отбеливание</span></label>
+              <label class="chip"><input type="radio" name="service" value="hygiene"><span>Гигиена</span></label>
+              <label class="chip"><input type="radio" name="service" value="kids"><span>Детская</span></label>
+              <label class="chip"><input type="radio" name="service" value="surgery"><span>Хирургия</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label class="legend" for="doctorSelect"><span class="num">2</span>Врач</label>
+            <div class="select">
+              <select id="doctorSelect" name="doctor">
+                <option value="any">Любой свободный врач</option>
+                <option value="arman">Арман Сейтжанов · имплантолог</option>
+                <option value="aigerim">Айгерим Нурланова · ортодонт</option>
+                <option value="elena">Елена Ким · терапевт</option>
+                <option value="timur">Тимур Абдрахманов · ортопед</option>
+              </select>
+              <i class="ph ph-caret-down"></i>
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend><span class="num">3</span>Дата и время</legend>
+            <div class="dates" id="dates" role="radiogroup" aria-label="Дата"></div>
+            <div class="times" id="times" role="radiogroup" aria-label="Время"></div>
+            <p class="hint" id="slotHint"></p>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend><span class="num">4</span>Контакты</legend>
+            <div class="row2">
+              <label class="input"><span>Имя</span><input name="name" autocomplete="given-name" placeholder="Как к вам обращаться" required></label>
+              <label class="input"><span>Телефон</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+            </div>
+            <label class="input"><span>Комментарий <small>необязательно</small></span><textarea name="comment" rows="2" placeholder="Что беспокоит?"></textarea></label>
+            <label class="check"><input type="checkbox" name="consent" checked required><span>Согласен на обработку персональных данных</span></label>
+          </fieldset>
+
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="btn btn-dark btn-block" type="submit" id="submitBtn">Записаться <i class="ph ph-arrow-right"></i></button>
+        </form>
+
+        <div class="done" id="bookingDone" hidden>
+          <div class="done-ico"><i class="ph ph-check"></i></div>
+          <h3>Вы записаны</h3>
+          <p id="doneText"></p>
+          <dl class="done-list" id="doneList"></dl>
+          <div class="done-actions">
+            <a class="btn btn-soft" id="icsLink" download="aqtis-visit.ics"><i class="ph ph-calendar-plus"></i> В календарь</a>
+            <button class="btn btn-line" id="againBtn" type="button">Новая запись</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTS ============ -->
+    <section class="section contacts" id="contacts">
+      <div class="contacts-card" data-reveal>
+        <p class="kicker">Контакты</p>
+        <h2>Ждём <em>в гости</em></h2>
+        <ul class="c-list">
+          <li><i class="ph ph-map-pin"></i><div><small>Адрес</small><b>Алматы, пр. Достык, 128</b><span>2 этаж, вход со двора, своя парковка</span></div></li>
+          <li><i class="ph ph-phone"></i><div><small>Телефон</small><a href="tel:+77000000000"><b>+7 700 000 00 00</b></a><span>Звонки и WhatsApp</span></div></li>
+          <li><i class="ph ph-clock"></i><div><small>Часы работы</small><b>Пн–Пт 9:00–21:00</b><span>Сб 9:00–18:00, Вс выходной</span></div></li>
+          <li><i class="ph ph-envelope-simple"></i><div><small>Почта</small><a href="mailto:hello@aqtis.kz"><b>hello@aqtis.kz</b></a></div></li>
+        </ul>
+        <div class="c-actions">
+          <a class="btn btn-dark" href="#booking">Записаться</a>
+          <a class="btn btn-line" href="https://2gis.kz/almaty/search/%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%20128" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow"></i> Маршрут</a>
+        </div>
+      </div>
+      <div class="map" data-reveal>
+        <iframe title="Карта: Алматы, пр. Достык, 128" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=76.9455%2C43.2255%2C76.9705%2C43.2385&amp;layer=mapnik"></iframe>
+        <div class="map-pin" aria-hidden="true"><span></span></div>
+        <div class="map-label" aria-hidden="true"><b>AQTIS</b> пр. Достык, 128</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="f-top">
+      <a href="#top" class="logo" aria-label="AQTIS, наверх">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.2 4.5c2.6 0 4.2 1.3 6.8 1.3s4.2-1.3 6.8-1.3c3.9 0 6 3.2 6 7.1 0 3.1-1.3 5-2.3 7.6-1 2.7-1.2 8.3-4 8.3-2.6 0-2.4-6.6-6.5-6.6s-3.9 6.6-6.5 6.6c-2.8 0-3-5.6-4-8.3-1-2.6-2.3-4.5-2.3-7.6 0-3.9 2.1-7.1 6-7.1Z"/></svg>
+        <span class="logo-word">AQTIS</span>
+      </a>
+      <nav aria-label="Ссылки в подвале">
+        <a href="#services">Услуги</a><a href="#doctors">Врачи</a><a href="#reviews">Отзывы</a><a href="#booking">Запись</a><a href="#contacts">Контакты</a>
+      </nav>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://wa.me/77000000000" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+        <a href="#" aria-label="Telegram"><i class="ph ph-telegram-logo"></i></a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>Лицензия № 00000DX от 01.01.2011 · Имеются противопоказания, нужна консультация специалиста</span>
+      <span>Концепт сайта для стоматологии · © <span id="year">2026</span> djedai</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/" } }</script>
+  <script type="module" src="js/tooth.js"></script>
+</body>
+</html>

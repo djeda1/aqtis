@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>AQTIS · Dental clinic in Almaty</title>
+  <meta name="description" content="AQTIS: dental clinic in Almaty. Microscope-assisted treatment, implants with a 10-year warranty, ZOOM whitening. Book a dentist online. Site concept.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="alternate" hreflang="ru" href="../">
+  <link rel="alternate" hreflang="en" href="./">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" aria-label="AQTIS, home">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.2 4.5c2.6 0 4.2 1.3 6.8 1.3s4.2-1.3 6.8-1.3c3.9 0 6 3.2 6 7.1 0 3.1-1.3 5-2.3 7.6-1 2.7-1.2 8.3-4 8.3-2.6 0-2.4-6.6-6.5-6.6s-3.9 6.6-6.5 6.6c-2.8 0-3-5.6-4-8.3-1-2.6-2.3-4.5-2.3-7.6 0-3.9 2.1-7.1 6-7.1Z"/></svg>
+      <span class="logo-word">AQTIS</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#doctors">Dentists</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contacts">Contacts</a>
+    </nav>
+    <a class="nav-phone" href="tel:+77000000000"><i class="ph ph-phone"></i> +7 700 000 00 00</a>
+    <div class="lang" aria-label="Language">
+      <a href="../" hreflang="ru" lang="ru">RU</a>
+      <a href="./" aria-current="true">EN</a>
+    </div>
+    <a href="#booking" class="btn btn-dark btn-sm nav-cta">Book now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span></button>
+  </header>
+
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#services">Services</a>
+      <a href="#doctors">Dentists</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contacts">Contacts</a>
+      <a href="tel:+77000000000" class="drawer-phone">+7 700 000 00 00</a>
+      <a href="#booking" class="btn btn-dark">Book an appointment</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <span id="top" class="anchor-top"></span>
+      <div class="hero-stage">
+        <div class="halo" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="tooth3d" id="tooth3d" aria-label="3D model of a molar, drag to rotate" role="img"></div>
+        <svg class="tooth-fallback" viewBox="0 0 200 260" aria-hidden="true"><defs><linearGradient id="tf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e3ecef"/></linearGradient></defs><path fill="url(#tf)" stroke="#d5e1e5" stroke-width="2" d="M52 20c18 0 30 9 48 9s30-9 48-9c27 0 42 22 42 49 0 22-9 35-16 53-7 19-8 58-28 58-18 0-17-46-46-46s-28 46-46 46c-20 0-21-39-28-58C19 104 10 91 10 69c0-27 15-49 42-49Z"/></svg>
+
+        <div class="stage-ui">
+          <div class="modes" role="tablist" aria-label="Model view">
+            <button role="tab" class="mode is-active" aria-selected="true" data-mode="natural"><i class="ph ph-tooth"></i> Tooth</button>
+            <button role="tab" class="mode" aria-selected="false" data-mode="implant"><i class="ph ph-screwdriver"></i> Implant</button>
+            <button role="tab" class="mode" aria-selected="false" data-mode="whitening"><i class="ph ph-sparkle"></i> Whitening</button>
+          </div>
+          <p class="stage-caption" id="stageCaption" aria-live="polite">A molar in 3D. Enamel is the hardest tissue in the body, so we treat under a microscope and remove as little as possible.</p>
+          <span class="shade" id="shade" aria-hidden="true">VITA A3.5</span>
+        </div>
+        <p class="drag-hint" aria-hidden="true"><i class="ph ph-hand-grabbing"></i> Drag to rotate</p>
+
+        <div class="float-card fc-1" aria-hidden="true">
+          <span class="fc-ico"><i class="ph ph-shield-check"></i></span>
+          <span><b>10 years</b><small>implant warranty</small></span>
+        </div>
+        <div class="float-card fc-2" aria-hidden="true">
+          <span class="fc-ico"><i class="ph-fill ph-star"></i></span>
+          <span><b>4.9</b><small>1,248 reviews on 2GIS</small></span>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span>Dental clinic in Almaty · since 2011</p>
+        <h1>A smile you <em>never have to think about</em></h1>
+        <p class="lead">Calm, painless dentistry: digital diagnostics, a microscope in every room, and a quote that doesn't change once treatment begins.</p>
+        <div class="hero-actions">
+          <a class="btn btn-dark" href="#booking">Book an appointment <i class="ph ph-arrow-right"></i></a>
+          <a class="btn btn-line" href="#doctors">Choose a dentist</a>
+        </div>
+        <ul class="hero-stats">
+          <li><b data-count="15">15</b><span>years in practice</span></li>
+          <li><b data-count="38000" data-sep>38,000</b><span>patients</span></li>
+          <li><b>0 ₸</b><span>first consultation</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="trust" aria-label="Technology">
+      <ul>
+        <li><i class="ph ph-microscope"></i>Carl Zeiss microscopes</li>
+        <li><i class="ph ph-cube-focus"></i>3D CT scan in 12 seconds</li>
+        <li><i class="ph ph-syringe"></i>Computer-controlled anesthesia</li>
+        <li><i class="ph ph-certificate"></i>Straumann implants</li>
+        <li><i class="ph ph-baby"></i>Kids' room</li>
+      </ul>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services">
+      <div class="section-head" data-reveal>
+        <p class="kicker">Services &amp; prices</p>
+        <h2>Everything your teeth need, <em>under one roof</em></h2>
+        <p class="sub">Prices are locked in your treatment plan. If the work turns out bigger than expected, you don't pay extra.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc" data-reveal>
+          <i class="ph ph-first-aid-kit svc-ico"></i>
+          <h3>Cavity treatment</h3>
+          <p>Under a microscope with rubber dam isolation. Fillings are matched to your enamel shade.</p>
+          <div class="svc-foot"><span class="price">from 18,000 ₸</span><button class="svc-book" data-service="therapy" aria-label="Book: cavity treatment"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc svc-feature" data-reveal>
+          <i class="ph ph-screwdriver svc-ico"></i>
+          <h3>Implants</h3>
+          <p>Straumann and Osstem. CT-based surgical guide, placement in a single visit.</p>
+          <div class="svc-foot"><span class="price">from 190,000 ₸</span><button class="svc-book" data-service="implant" aria-label="Book: implants"><i class="ph ph-arrow-up-right"></i></button></div>
+          <span class="svc-tag">10-year warranty</span>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-crown-simple svc-ico"></i>
+          <h3>Crowns &amp; veneers</h3>
+          <p>Zirconia and E.max from our in-house lab. Try on a digital mock-up before any work.</p>
+          <div class="svc-foot"><span class="price">from 120,000 ₸</span><button class="svc-book" data-service="prosthetics" aria-label="Book: crowns and veneers"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-align-center-horizontal-simple svc-ico"></i>
+          <h3>Braces &amp; aligners</h3>
+          <p>Metal, ceramic and clear aligners. See your result in 3D before you start.</p>
+          <div class="svc-foot"><span class="price">from 450,000 ₸</span><button class="svc-book" data-service="ortho" aria-label="Book: braces and aligners"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-sparkle svc-ico"></i>
+          <h3>Whitening</h3>
+          <p>ZOOM 4: up to 8 shades lighter in 90 minutes. Safe for enamel and gentle on sensitivity.</p>
+          <div class="svc-foot"><span class="price">from 85,000 ₸</span><button class="svc-book" data-service="whitening" aria-label="Book: whitening"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-drop svc-ico"></i>
+          <h3>Hygiene</h3>
+          <p>Ultrasonic scaling, AirFlow and polishing. Twice a year prevents most problems.</p>
+          <div class="svc-foot"><span class="price">from 22,000 ₸</span><button class="svc-book" data-service="hygiene" aria-label="Book: hygiene"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-smiley svc-ico"></i>
+          <h3>Kids' dentistry</h3>
+          <p>A separate room with cartoons, and a free get-to-know-us visit.</p>
+          <div class="svc-foot"><span class="price">from 12,000 ₸</span><button class="svc-book" data-service="kids" aria-label="Book: kids' dentistry"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+        <article class="svc" data-reveal>
+          <i class="ph ph-scissors svc-ico"></i>
+          <h3>Oral surgery</h3>
+          <p>Wisdom teeth, sinus lifts, bone grafting. Sedation available on request.</p>
+          <div class="svc-foot"><span class="price">from 15,000 ₸</span><button class="svc-book" data-service="surgery" aria-label="Book: oral surgery"><i class="ph ph-arrow-up-right"></i></button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ DOCTORS ============ -->
+    <section class="section doctors" id="doctors">
+      <div class="section-head split" data-reveal>
+        <div>
+          <p class="kicker">Dentists</p>
+          <h2>The people <em>smiles are trusted to</em></h2>
+        </div>
+        <p class="sub">Every dentist completes at least 60 hours of training a year. You can book a specific specialist.</p>
+      </div>
+      <div class="doc-grid">
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&h=860&fit=crop&crop=faces&q=80" alt="Arman Seitzhanov" loading="lazy" width="700" height="860">
+            <span class="doc-exp">18 years</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Arman Seitzhanov</h3>
+            <p class="doc-role">Implant surgeon, chief dentist</p>
+            <ul class="doc-tags"><li>Implants</li><li>Bone grafting</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 5.0 · 312 reviews</span>
+              <button class="btn btn-soft btn-sm" data-doctor="arman">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&h=860&fit=crop&crop=faces&q=80" alt="Aigerim Nurlanova" loading="lazy" width="700" height="860">
+            <span class="doc-exp">11 years</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Aigerim Nurlanova</h3>
+            <p class="doc-role">Orthodontist</p>
+            <ul class="doc-tags"><li>Aligners</li><li>Braces</li><li>Kids from 6</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 4.9 · 204 reviews</span>
+              <button class="btn btn-soft btn-sm" data-doctor="aigerim">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=860&fit=crop&crop=faces&q=80" alt="Elena Kim" loading="lazy" width="700" height="860">
+            <span class="doc-exp">14 years</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Elena Kim</h3>
+            <p class="doc-role">General dentist, endodontist</p>
+            <ul class="doc-tags"><li>Microscope root canals</li><li>Restorations</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 4.9 · 268 reviews</span>
+              <button class="btn btn-soft btn-sm" data-doctor="elena">Book</button>
+            </div>
+          </div>
+        </article>
+        <article class="doc" data-reveal>
+          <figure class="doc-photo">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=700&h=860&fit=crop&crop=faces&q=80" alt="Timur Abdrakhmanov" loading="lazy" width="700" height="860">
+            <span class="doc-exp">9 years</span>
+          </figure>
+          <div class="doc-body">
+            <h3>Timur Abdrakhmanov</h3>
+            <p class="doc-role">Prosthodontist, cosmetic dentist</p>
+            <ul class="doc-tags"><li>Veneers</li><li>Crowns</li><li>Whitening</li></ul>
+            <div class="doc-foot">
+              <span class="doc-rate"><i class="ph-fill ph-star"></i> 4.9 · 157 reviews</span>
+              <button class="btn btn-soft btn-sm" data-doctor="timur">Book</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ FIRST VISIT ============ -->
+    <section class="section visit">
+      <div class="visit-media" data-reveal>
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80" alt="Bright treatment room with a dental chair and microscope" loading="lazy" width="1200" height="800">
+        <div class="visit-badge"><i class="ph ph-clock"></i><span><b>45 minutes</b>an unhurried first visit</span></div>
+      </div>
+      <div class="visit-copy" data-reveal>
+        <p class="kicker">First visit</p>
+        <h2>We understand first, <em>then we treat</em></h2>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Exam and 3D scan</h3><p>The dentist checks every tooth, and the CT scan is done right in the room. The consultation is free.</p></div></li>
+          <li><span>02</span><div><h3>Plan and quote</h3><p>Two or three treatment options with prices and timelines. The price is fixed in your contract.</p></div></li>
+          <li><span>03</span><div><h3>Painless treatment</h3><p>Computer-controlled anesthesia, sedation if you want it, headphones and a blanket.</p></div></li>
+          <li><span>04</span><div><h3>Follow-up</h3><p>We remind you about hygiene and check-ups. Your warranty comes in writing.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section class="section reviews" id="reviews">
+      <div class="section-head split" data-reveal>
+        <div>
+          <p class="kicker">Reviews</p>
+          <h2>Our patients say it <em>better than we do</em></h2>
+        </div>
+        <div class="rating-sum">
+          <div class="rs-score">4.9</div>
+          <div>
+            <div class="stars" aria-label="4.9 out of 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+            <p>1,248 reviews on 2GIS and Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev-wrap" data-reveal>
+        <div class="rev-track" id="revTrack" tabindex="0" aria-label="Patient reviews">
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">2GIS</span></div>
+            <p>“I've been scared of dentists since I was a kid. Dr. Kim did my root canal while I watched a show in headphones. It honestly never hurt once.”</p>
+            <footer><span class="ava">D</span><div><b>Dinara A.</b><small>Root canal · September</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">Google</span></div>
+            <p>“Two implants with Dr. Seitzhanov. Everything went to plan: CT, surgical guide, placement in an hour. The quote didn't grow by a single tenge.”</p>
+            <footer><span class="ava">Y</span><div><b>Yerlan K.</b><small>Implants · August</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">2GIS</span></div>
+            <p>“My daughter is 7 and actually asks to see Dr. Aigerim. She wears her aligners without a fuss, and they showed me her future smile on a 3D model.”</p>
+            <footer><span class="ava">S</span><div><b>Svetlana M.</b><small>Orthodontics · July</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">Google</span></div>
+            <p>“Veneers on 8 teeth. First we tried on a digital mock-up and I tweaked the shape. They look so natural that nobody believes they're veneers.”</p>
+            <footer><span class="ava">A</span><div><b>Aliya T.</b><small>Veneers · June</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph ph-star"></i></div><span class="rev-src">2GIS</span></div>
+            <p>“ZOOM whitening, 6 shades lighter. A couple of days of sensitivity, but the dentist warned me and gave me a gel. Booking my cleaning next.”</p>
+            <footer><span class="ava">M</span><div><b>Madina Zh.</b><small>Whitening · May</small></div></footer>
+          </article>
+          <article class="rev">
+            <div class="rev-top"><div class="stars sm"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><span class="rev-src">Google</span></div>
+            <p>“Wisdom tooth out under sedation. I woke up and it was already over. That evening a nurse called to ask how I was feeling. Nice touch.”</p>
+            <footer><span class="ava">R</span><div><b>Ruslan B.</b><small>Oral surgery · April</small></div></footer>
+          </article>
+        </div>
+        <div class="rev-nav">
+          <button class="icon-btn" id="revPrev" aria-label="Previous reviews"><i class="ph ph-arrow-left"></i></button>
+          <button class="icon-btn" id="revNext" aria-label="Next reviews"><i class="ph ph-arrow-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section booking" id="booking">
+      <div class="booking-info" data-reveal>
+        <p class="kicker">Online booking</p>
+        <h2>Book in <em>under a minute</em></h2>
+        <p class="sub">Pick a service, a dentist and a time that suits you. Our front desk will call back within 15 minutes to confirm.</p>
+        <ul class="perks">
+          <li><i class="ph ph-check-circle"></i>First consultation is free</li>
+          <li><i class="ph ph-check-circle"></i>WhatsApp reminder the day before</li>
+          <li><i class="ph ph-check-circle"></i>Reschedule any time</li>
+        </ul>
+        <a class="wa-link" id="waLink" href="https://wa.me/77000000000" target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo"></i> Prefer WhatsApp?</a>
+      </div>
+
+      <div class="booking-card" data-reveal>
+        <form id="bookingForm" novalidate>
+          <fieldset class="field">
+            <legend><span class="num">1</span>Service</legend>
+            <div class="chips" id="serviceChips">
+              <label class="chip"><input type="radio" name="service" value="consult" checked><span>Consultation</span></label>
+              <label class="chip"><input type="radio" name="service" value="therapy"><span>Treatment</span></label>
+              <label class="chip"><input type="radio" name="service" value="implant"><span>Implants</span></label>
+              <label class="chip"><input type="radio" name="service" value="prosthetics"><span>Crowns &amp; veneers</span></label>
+              <label class="chip"><input type="radio" name="service" value="ortho"><span>Orthodontics</span></label>
+              <label class="chip"><input type="radio" name="service" value="whitening"><span>Whitening</span></label>
+              <label class="chip"><input type="radio" name="service" value="hygiene"><span>Hygiene</span></label>
+              <label class="chip"><input type="radio" name="service" value="kids"><span>Kids</span></label>
+              <label class="chip"><input type="radio" name="service" value="surgery"><span>Surgery</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label class="legend" for="doctorSelect"><span class="num">2</span>Dentist</label>
+            <div class="select">
+              <select id="doctorSelect" name="doctor">
+                <option value="any">Any available dentist</option>
+                <option value="arman">Arman Seitzhanov · implants</option>
+                <option value="aigerim">Aigerim Nurlanova · orthodontist</option>
+                <option value="elena">Elena Kim · general dentist</option>
+                <option value="timur">Timur Abdrakhmanov · prosthodontist</option>
+              </select>
+              <i class="ph ph-caret-down"></i>
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend><span class="num">3</span>Date &amp; time</legend>
+            <div class="dates" id="dates" role="radiogroup" aria-label="Date"></div>
+            <div class="times" id="times" role="radiogroup" aria-label="Time"></div>
+            <p class="hint" id="slotHint"></p>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend><span class="num">4</span>Your details</legend>
+            <div class="row2">
+              <label class="input"><span>Name</span><input name="name" autocomplete="given-name" placeholder="What should we call you?" required></label>
+              <label class="input"><span>Phone</span><input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+            </div>
+            <label class="input"><span>Comment <small>optional</small></span><textarea name="comment" rows="2" placeholder="What's bothering you?"></textarea></label>
+            <label class="check"><input type="checkbox" name="consent" checked required><span>I agree to the processing of my personal data</span></label>
+          </fieldset>
+
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="btn btn-dark btn-block" type="submit" id="submitBtn">Book <i class="ph ph-arrow-right"></i></button>
+        </form>
+
+        <div class="done" id="bookingDone" hidden>
+          <div class="done-ico"><i class="ph ph-check"></i></div>
+          <h3>You're booked</h3>
+          <p id="doneText"></p>
+          <dl class="done-list" id="doneList"></dl>
+          <div class="done-actions">
+            <a class="btn btn-soft" id="icsLink" download="aqtis-visit.ics"><i class="ph ph-calendar-plus"></i> Add to calendar</a>
+            <button class="btn btn-line" id="againBtn" type="button">New booking</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTS ============ -->
+    <section class="section contacts" id="contacts">
+      <div class="contacts-card" data-reveal>
+        <p class="kicker">Contacts</p>
+        <h2>Come <em>see us</em></h2>
+        <ul class="c-list">
+          <li><i class="ph ph-map-pin"></i><div><small>Address</small><b>128 Dostyk Ave, Almaty</b><span>2nd floor, courtyard entrance, private parking</span></div></li>
+          <li><i class="ph ph-phone"></i><div><small>Phone</small><a href="tel:+77000000000"><b>+7 700 000 00 00</b></a><span>Calls and WhatsApp</span></div></li>
+          <li><i class="ph ph-clock"></i><div><small>Opening hours</small><b>Mon–Fri 9:00–21:00</b><span>Sat 9:00–18:00, closed on Sunday</span></div></li>
+          <li><i class="ph ph-envelope-simple"></i><div><small>Email</small><a href="mailto:hello@aqtis.kz"><b>hello@aqtis.kz</b></a></div></li>
+        </ul>
+        <div class="c-actions">
+          <a class="btn btn-dark" href="#booking">Book now</a>
+          <a class="btn btn-line" href="https://2gis.kz/almaty/search/%D0%94%D0%BE%D1%81%D1%82%D1%8B%D0%BA%20128" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow"></i> Directions</a>
+        </div>
+      </div>
+      <div class="map" data-reveal>
+        <iframe title="Map: 128 Dostyk Ave, Almaty" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=76.9455%2C43.2255%2C76.9705%2C43.2385&amp;layer=mapnik"></iframe>
+        <div class="map-pin" aria-hidden="true"><span></span></div>
+        <div class="map-label" aria-hidden="true"><b>AQTIS</b> 128 Dostyk Ave</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="f-top">
+      <a href="#top" class="logo" aria-label="AQTIS, back to top">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M9.2 4.5c2.6 0 4.2 1.3 6.8 1.3s4.2-1.3 6.8-1.3c3.9 0 6 3.2 6 7.1 0 3.1-1.3 5-2.3 7.6-1 2.7-1.2 8.3-4 8.3-2.6 0-2.4-6.6-6.5-6.6s-3.9 6.6-6.5 6.6c-2.8 0-3-5.6-4-8.3-1-2.6-2.3-4.5-2.3-7.6 0-3.9 2.1-7.1 6-7.1Z"/></svg>
+        <span class="logo-word">AQTIS</span>
+      </a>
+      <nav aria-label="Footer links">
+        <a href="#services">Services</a><a href="#doctors">Dentists</a><a href="#reviews">Reviews</a><a href="#booking">Booking</a><a href="#contacts">Contacts</a>
+      </nav>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://wa.me/77000000000" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+        <a href="#" aria-label="Telegram"><i class="ph ph-telegram-logo"></i></a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>License No. 00000DX dated 01.01.2011 · Contraindications may apply, consult a specialist</span>
+      <span>Dental clinic site concept · © <span id="year">2026</span> djedai</span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/" } }</script>
+  <script type="module" src="../js/tooth.js"></script>
+</body>
+</html>
